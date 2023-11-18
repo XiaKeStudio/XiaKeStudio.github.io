@@ -1,0 +1,62 @@
+body {
+    background:#060e1b;
+    overflow: hidden;
+}
+
+@keyframes GC {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 400% 0;
+  }
+}
+
+a {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 60px;
+  background-color: skyblue;
+  color: #fff;
+  line-height: 60px;
+  text-align: center;
+  text-decoration: none;
+  background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+  background-size: 400%;
+  margin-right: 50px;
+  font-size: 20px;
+}
+
+a:hover {
+  animation: GC 8s linear infinite;
+}
+
+a:before {
+  content: ' ';
+  position: absolute;
+  left: -5px;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+  background-size: 400%;
+  border-radius: 10px;
+
+  transition: all 1s;
+}
+
+a:hover:before {
+
+  animation: GC 8s linear infinite;
+  filter: blur(20px);
+}
+
+h1 {
+  background-color: white;
+}
+
+h3 {
+  color: white;
+}
